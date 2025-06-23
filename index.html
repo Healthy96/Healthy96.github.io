@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Health - Your Guide to a Better Well-being</title>
+    <style>
+        :root { --primary-color: #2e8b57; --secondary-color: #f4f4f4; --text-color: #333333; --white-color: #ffffff; --border-color: #e0e0e0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; background-color: var(--secondary-color); color: var(--text-color); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .main-header .container { display: flex; justify-content: space-between; align-items: center; }
+        .main-header { background-color: var(--white-color); padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
+        .main-header .logo { font-size: 1.8em; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+        .main-nav ul { margin: 0; padding: 0; list-style: none; display: flex; gap: 25px; }
+        .main-nav a { text-decoration: none; color: var(--text-color); font-weight: 600; font-size: 1em; transition: color 0.3s ease; }
+        .main-nav a:hover { color: var(--primary-color); }
+        .hero { position: relative; padding: 80px 20px; text-align: center; background-image: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070'); background-size: cover; background-position: center; color: var(--white-color); }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); }
+        .hero .container { position: relative; }
+        .hero h1 { font-size: 3em; margin-bottom: 10px; color: var(--white-color); text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
+        .hero p { font-size: 1.3em; color: var(--white-color); text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
+        .main-layout { display: flex; gap: 30px; margin: 30px auto; }
+        .content-area { flex: 3; }
+        .sidebar { flex: 1; }
+        .section-title { font-size: 2em; margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; }
+        .articles-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+        .article-card { background: var(--white-color); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); overflow: hidden; display: flex; }
+        .article-card:hover { transform: translateY(-5px); transition: transform 0.3s ease; }
+        .article-card img { width: 250px; height: auto; object-fit: cover; }
+        .article-content { padding: 20px; }
+        .article-category { font-size: 0.8em; color: #777; text-transform: uppercase; margin-bottom: 10px; }
+        .article-card h3 { font-size: 1.3em; margin: 0 0 15px 0; }
+        .article-card a { text-decoration: none; color: var(--primary-color); font-weight: bold; }
+        .widget { background: var(--white-color); padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        .widget-title { font-size: 1.2em; font-weight: bold; margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+        .widget-search input[type="text"] { width: calc(100% - 22px); padding: 10px; border: 1px solid var(--border-color); border-radius: 4px; }
+        .widget ul { list-style: none; padding: 0; margin: 0; }
+        .widget ul li { padding: 8px 0; border-bottom: 1px solid var(--border-color); }
+        .widget ul li:last-child { border-bottom: none; }
+        .widget ul li a { text-decoration: none; color: var(--text-color); }
+        .widget ul li a:hover { color: var(--primary-color); }
+        .main-footer { background-color: #333; color: var(--white-color); text-align: center; padding: 20px; margin-top: 40px; }
+        @media (max-width: 900px) { .main-layout { flex-direction: column; } }
+        @media (max-width: 768px) { .hero h1 { font-size: 2em; } .main-header .container { flex-direction: column; gap: 15px; } .article-card { flex-direction: column; } .article-card img { width: 100%; height: 200px; } }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">Daily Health</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Your Daily Guide to a Healthier Life</h1>
+                <p>Simple, science-backed advice on nutrition, stress management, and well-being.</p>
+            </div>
+        </section>
+        <div class="container main-layout">
+            <div class="content-area">
+                <h2 class="section-title">Latest Guides</h2>
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <img src="https://source.unsplash.com/random/400x300/?food,healthy" alt="Healthy food">
+                        <div class="article-content"><p class="article-category">Nutrition</p><h3>7 Foods That Naturally Help Reduce Stress</h3><a href="foods-for-stress.html">Read More →</a></div>
+                    </article>
+                    <article class="article-card">
+                        <img src="https://source.unsplash.com/random/400x300/?sunrise,calm,window" alt="A calm sunrise seen from a window">
+                        <div class="article-content"><p class="article-category">Stress Management</p><h3>The 5-Minute Morning Routine to Boost Your Energy</h3><a href="morning-routine.html">Read More →</a></div>
+                    </article>
+                    <article class="article-card">
+                        <img src="https://source.unsplash.com/random/400x300/?sleep,bedroom" alt="Peaceful bedroom">
+                        <div class="article-content"><p class="article-category">Sleep</p><h3>How to Create the Perfect Environment for Deep Sleep</h3><a href="#">Read More →</a></div>
+                    </article>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <div class="widget widget-search"><h3 class="widget-title">Search Articles</h3><input type="text" placeholder="Search..."></div>
+                <div class="widget"><h3 class="widget-title">Recent Posts</h3><ul><li><a href="foods-for-stress.html">7 Foods That Naturally Help Reduce Stress</a></li><li><a href="morning-routine.html">A 5-Minute Routine to Start Your Day Calm</a></li><li><a href="#">How to Create the Perfect Environment for Deep Sleep</a></li></ul></div>
+                <div class="widget"><h3 class="widget-title">Categories</h3><ul><li><a href="#">Nutrition</a></li><li><a href="#">Stress Management</a></li><li><a href="#">Sleep</a></li><li><a href="#">Productivity</a></li></ul></div>
+            </aside>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2025 Daily Health. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
